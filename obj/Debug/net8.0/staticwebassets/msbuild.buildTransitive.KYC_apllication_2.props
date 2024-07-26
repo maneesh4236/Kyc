@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\KYC_apllication_2.props" />
+</Project>
