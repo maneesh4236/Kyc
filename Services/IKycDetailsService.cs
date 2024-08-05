@@ -11,5 +11,7 @@ namespace KYC_apllication_2.Services
         Task<List<UserKycDetails>> GetAllUserKycDetailsAsync();
         Task<UserKycDetails> GetByUserIdAsync(int id);
         Task<bool> UpdateKycDetailsAsync(int userId, UserKycDetailsDto userKycDetailsDto);
+        Task<bool> UpdateKycStatusAsync(int id, string kycStatus);
+        Task<bool> DeleteKycDetailsAsync(int userId); // New delete method
     }
 }

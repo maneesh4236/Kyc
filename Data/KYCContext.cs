@@ -14,13 +14,13 @@ namespace KYC_apllication_2.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            //base.OnModelCreating(modelBuilder);
 
             // Configure the one-to-one relationship between User and UserKycDetails
-            modelBuilder.Entity<User>()
-                .HasOne(u => u.UserKycDetails)
-                .WithOne(uk => uk.User)
-                .HasForeignKey<UserKycDetails>(uk => uk.UserId);
+           // modelBuilder.Entity<User>()
+              //  .HasOne(u => u.UserKycDetails)
+                //.WithOne(uk => uk.User)
+                //.HasForeignKey<UserKycDetails>(uk => uk.UserId);
 
             // Optional: Set up additional configurations if needed
         }

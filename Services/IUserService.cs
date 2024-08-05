@@ -1,14 +1,19 @@
-﻿using KYC_apllication_2.DTOs;
-using System.Threading.Tasks;
+﻿using KYC_apllication_2.Entity;
 
-namespace KYC_apllication_2.Services
+public interface IUserService
 {
-    public interface IUserService
-    {
-        Task<bool> RegisterUserAsync(UserRegisterDto user);
-        Task<bool> ValidateUserCredentialsAsync(string username, string password);
-        Task<string> GenerateJwtTokenAsync(string username);
-        Task<bool> UpdateAdminProfileAsync(AdminProfileDto adminProfileDto);
-        Task<bool> ChangeAdminPasswordAsync(ChangePasswordDto changePasswordDto);
-    }
+    Task<bool> RegisterUserAsync(UserRegisterDto user);
+    Task<bool> ValidateUserCredentialsAsync(string username, string password);
+    Task<(string Token, int UserId, string Role)> GenerateJwtTokenAsync(string username); // Updated return type
+
+    Task<User> GetUserByIdAsync(int id);
+    Task<List<User>> GetAllUSerByRoleAsync(string role);
+    Task<bool> UpdateUserAsync(User user);
+
+    Task<bool> UpdateAdminProfileAsync(int userId, string username, string password);
+    Task<bool> ChangePasswordAsync(int userId, string oldPassword, string newPassword);
+
+    // Add the following methods
+    Task<bool> CheckIfUserExistsAsync(string username);
+    Task<bool> ResetPasswordAsync(string username, string newPassword);
 }

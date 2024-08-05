@@ -1,10 +1,9 @@
 using KYC_apllication_2.Data;
-using KYC_apllication_2.Repositories;
+
 using KYC_apllication_2.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,12 +15,9 @@ builder.Services.AddDbContext<KYCContext>(options =>
 // Register services
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IKycDetailsService, KycDetailsService>();
-// Ensure repositories are also registered
-builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<IKycDetailsRepository, KycDetailsRepository>();
 
 // Configure JWT authentication
-var key = Encoding.UTF8.GetBytes("fe836114546aabf37b31a22aa2f3cab7705ead160926c0fa73c6310e2a12d110");
+var key = Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]);
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -43,6 +39,8 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddAuthorization();
 
+
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -56,8 +54,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-// Uncomment if HTTPS redirection is needed
-// app.UseHttpsRedirection();
+
+app.UseCors(options =>
+{
+    options.AllowAnyOrigin();
+    options.AllowAnyMethod();
+    options.AllowAnyHeader();
+});
 
 app.UseAuthentication();
 app.UseAuthorization();

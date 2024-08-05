@@ -16,10 +16,10 @@ namespace KYC_apllication_2.Entity
         [Required]
         public string Role { get; set; }
 
-        [Required]
-        public string Email { get; set; }   
+       // [Required]
+       // public string Email { get; set; }   
 
         // Navigation property for UserKycDetails
-        public UserKycDetails UserKycDetails { get; set; }
+      //  public UserKycDetails UserKycDetails { get; set; }
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KYC_apllication_2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09c4eeb55c3563e4ab61378a1cfe54f33d065543")]
 [assembly: System.Reflection.AssemblyProductAttribute("KYC_apllication_2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KYC_apllication_2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

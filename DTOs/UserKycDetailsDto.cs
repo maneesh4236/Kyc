@@ -18,7 +18,7 @@
 
         public string Email { get; set; }
 
-        public string KYCKycStatus { get; set; }
+        //public string KYCKycStatus { get; set; }
     }
 
 }

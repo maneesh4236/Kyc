@@ -35,6 +35,6 @@ namespace KYC_apllication_2.Entity
         public string KycStatus { get; set; }
 
         // Navigation property for User
-        public User User { get; set; }
+       // public User User { get; set; }
     }
 }

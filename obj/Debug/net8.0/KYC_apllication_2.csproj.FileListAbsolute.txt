@@ -136,3 +136,11 @@ E:\Practise_c_sharp\KYC_apllication_2\KYC_apllication_2\obj\Debug\net8.0\refint\
 E:\Practise_c_sharp\KYC_apllication_2\KYC_apllication_2\obj\Debug\net8.0\KYC_apllication_2.pdb
 E:\Practise_c_sharp\KYC_apllication_2\KYC_apllication_2\obj\Debug\net8.0\KYC_apllication_2.genruntimeconfig.cache
 E:\Practise_c_sharp\KYC_apllication_2\KYC_apllication_2\obj\Debug\net8.0\ref\KYC_apllication_2.dll
+E:\Practise_c_sharp\KYC_apllication_2\KYC_apllication_2\obj\Debug\net8.0\KYC_apllication_2.sourcelink.json
+E:\Practise_c_sharp\KYC_apllication_2\KYC_apllication_2\bin\Debug\net8.0\Castle.Core.dll
+E:\Practise_c_sharp\KYC_apllication_2\KYC_apllication_2\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
+E:\Practise_c_sharp\KYC_apllication_2\KYC_apllication_2\bin\Debug\net8.0\Moq.dll
+E:\Practise_c_sharp\KYC_apllication_2\KYC_apllication_2\bin\Debug\net8.0\xunit.abstractions.dll
+E:\Practise_c_sharp\KYC_apllication_2\KYC_apllication_2\bin\Debug\net8.0\xunit.assert.dll
+E:\Practise_c_sharp\KYC_apllication_2\KYC_apllication_2\bin\Debug\net8.0\xunit.core.dll
+E:\Practise_c_sharp\KYC_apllication_2\KYC_apllication_2\bin\Debug\net8.0\xunit.execution.dotnet.dll
